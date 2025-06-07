@@ -43,4 +43,7 @@ if st.button("Calcular produtos da reação"):
     st.write("### Reagentes restantes (mol):")
     for r, amt in reactants_left.items():
         st.write(f"{r}: {amt:.2f} mol")
-
+    
+    st.write("### Reagente limitante:")
+    limiting_reagent = min(reactant_amounts, key=lambda r: reactant_amounts[r] / reaction["reactants"][r] if reaction["reactants"][r] > 0 else float('inf'))
+    st.write(f"{limiting_reagent} é o reagente limitante.")
