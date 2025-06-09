@@ -23,7 +23,7 @@
 
 3. Execute o aplicativo:
     ```bash 
-    python main.py
+    streamlit run main.py
     ```
 
 # 🖇 Licença
