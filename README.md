@@ -7,3 +7,24 @@
 # 🚀 Funcionalidades principais 
 - Cálculo de proporções molares em massa.
 - Balanceamento automático de equações químicas.
+
+# 🖳 Como rodar o projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/GabrielSchutz/molab.git
+    cd molab
+    ```
+
+2. Instale as dependências:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Execute o aplicativo:
+    ```bash 
+    python main.py
+    ```
+
+# 🖇 Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
