@@ -40,10 +40,20 @@ if st.button("Calcular produtos da reação"):
     for p, amt in products_formed.items():
         st.write(f"{p}: {amt:.2f} mol")
 
+    # Reagentes restantes
     st.write("### Reagentes restantes (mol):")
     for r, amt in reactants_left.items():
         st.write(f"{r}: {amt:.2f} mol")
-    
+
+    # Determinar o reagente limitante
     st.write("### Reagente limitante:")
     limiting_reagent = min(reactant_amounts, key=lambda r: reactant_amounts[r] / reaction["reactants"][r] if reaction["reactants"][r] > 0 else float('inf'))
     st.write(f"{limiting_reagent} é o reagente limitante.")
+
+    # Entalpia de reação
+    if "enthalpy" in reaction:
+        st.write("### Entalpia de reação:")
+        st.write(f"{reaction['enthalpy']} kJ/mol")
+    else:
+        st.write("### Entalpia de reação: Informação não disponível para esta reação.")
+
