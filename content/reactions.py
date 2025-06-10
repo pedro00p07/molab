@@ -14,4 +14,9 @@ reactions = {
             "reactants": {"CO2": 1, "H2O": 1},
             "products": {"H2CO3": 1}
             }
+        # "Reação 4: ...": {    TODO Exemplo de como adicionar uma nova reação
+        #     "equation": "...",
+        #     "reactants": {"...": 1, "...": 1},
+        #     "products": {"...": 1}
+        # }
         }
