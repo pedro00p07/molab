@@ -7,6 +7,7 @@
 # 🚀 Funcionalidades principais 
 - Cálculo de proporções molares em massa.
 - Balanceamento automático de equações químicas.
+- Segurança 
 
 # 🖳 Como rodar o projeto
 
