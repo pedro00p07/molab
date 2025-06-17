@@ -3,7 +3,7 @@ from content.reactions import *
 from scipy.optimize import fsolve
 
 st.set_page_config(page_title="Simulador de Reações Químicas Inorgânicas", layout="centered")
-st.title("Molab 🧪")
+st.title("MolLab 🧪")
 
 reaction_name = st.selectbox("Escolha a reação química:", list(reactions.keys()))
 
