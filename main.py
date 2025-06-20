@@ -5,7 +5,7 @@ from enthalpy import verificar_entalpia
 
 st.set_page_config(page_title="Simulador de Reações Químicas Inorgânicas", layout="centered")
 
-fiewjfoiwest.title("MolLab 🧪")
+st.title("MolLab 🧪")
 
 reaction_name = st.selectbox("Escolha a reação química:", list(reactions.keys()))
 
@@ -53,9 +53,9 @@ if st.button("Calcular produtos da reação"):
     st.write(f"{limiting_reagent} é o reagente limitante.")
 
     if "enthalpy" in reaction:
-    st.write("### Entalpia de reação:")
-    st.write(f"{reaction['enthalpy']} kJ/mol")
-    
+        st.write("### Entalpia de reação:")
+        st.write(f"{reaction['enthalpy']} kJ/mol")
+        
     # Adiciona alerta de segurança com base na entalpia
     alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
     st.warning(alerta_entalpia)
