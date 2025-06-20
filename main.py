@@ -1,5 +1,6 @@
 import streamlit as st
 from content.reactions import *
+# from ui.tabs import *
 from scipy.optimize import fsolve
 from enthalpy import verificar_entalpia
 
@@ -55,7 +56,7 @@ if st.button("Calcular produtos da reação"):
     if "enthalpy" in reaction:
         st.write("### Entalpia de reação:")
         st.write(f"{reaction['enthalpy']} kJ/mol")
-        
+
     # Adiciona alerta de segurança com base na entalpia
     alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
     st.warning(alerta_entalpia)
