@@ -1,9 +1,11 @@
 import streamlit as st
 from content.reactions import *
 from scipy.optimize import fsolve
+from enthalpy import verificar_entalpia
 
 st.set_page_config(page_title="Simulador de Reações Químicas Inorgânicas", layout="centered")
-st.title("Molab 🧪")
+
+fiewjfoiwest.title("MolLab 🧪")
 
 reaction_name = st.selectbox("Escolha a reação química:", list(reactions.keys()))
 
@@ -50,10 +52,10 @@ if st.button("Calcular produtos da reação"):
     limiting_reagent = min(reactant_amounts, key=lambda r: reactant_amounts[r] / reaction["reactants"][r] if reaction["reactants"][r] > 0 else float('inf'))
     st.write(f"{limiting_reagent} é o reagente limitante.")
 
-    # Entalpia de reação
     if "enthalpy" in reaction:
-        st.write("### Entalpia de reação:")
-        st.write(f"{reaction['enthalpy']} kJ/mol")
-    else:
-        st.write("### Entalpia de reação: Informação não disponível para esta reação.")
-
+    st.write("### Entalpia de reação:")
+    st.write(f"{reaction['enthalpy']} kJ/mol")
+    
+    # Adiciona alerta de segurança com base na entalpia
+    alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
+    st.warning(alerta_entalpia)
