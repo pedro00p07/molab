@@ -79,7 +79,67 @@ reactions = {
             "equation": "CuO + H2SO4 -> CuSO4 + H2O",
             "reactants": {"CuO": 1, "H2SO4": 1},
             "products": {"CuSO4": 1, "H2O": 1}
-            }
+            },
+    "Reação 11: Ácido Fosfórico + Hidróxido de Sódio": {
+        "equation": "H3PO4 + 3NaOH -> Na3PO4 + 3H2O",
+        "reactants": {"H3PO4": 1, "NaOH": 3},
+        "products": {"Na3PO4": 1, "H2O": 3}
+    },
+    "Reação 12: Manganês + Oxigênio": {
+        "equation": "2Mn + O2 -> 2MnO",
+        "reactants": {"Mn": 2, "O2": 1},
+        "products": {"MnO": 2}
+    },
+    "Reação 13: Ácido Clorídrico + Óxido de Cálcio": {
+        "equation": "CaO + 2HCl -> CaCl2 + H2O",
+        "reactants": {"CaO": 1, "HCl": 2},
+        "products": {"CaCl2": 1, "H2O": 1}
+    },
+    "Reação 14: Oxigênio + Cobre": {
+        "equation": "2Cu + O2 -> 2CuO",
+        "reactants": {"Cu": 2, "O2": 1},
+        "products": {"CuO": 2}
+    },
+    "Reação 15: Nitrato de Potássio + Ácido Nítrico": {
+        "equation": "K2O + 2HNO3 -> 2KNO3 + H2O",
+        "reactants": {"K2O": 1, "HNO3": 2},
+        "products": {"KNO3": 2, "H2O": 1}
+    },
+    "Reação 16: Cloreto de cálcio + Carbonato de sódio": {
+        "equation": "CaCl2 + Na2CO3 -> CaCO3 + 2NaCl",
+        "reactants": {"CaCl2": 1, "Na2CO3": 1},
+        "products": {"CaCO3": 1, "NaCl": 2}
+    },
+    "Reação 17: Sulfato de cobre + Amônia": {
+        "equation": "CuSO4 + 4NH3 -> [Cu(NH3)4]SO4",
+        "reactants": {"CuSO4": 1, "NH3": 4},
+        "products": {"[Cu(NH3)4]SO4": 1}
+    },
+    "Reação 18: Óxido de zinco + Ácido sulfúrico": {
+        "equation": "ZnO + H2SO4 -> ZnSO4 + H2O",
+        "reactants": {"ZnO": 1, "H2SO4": 1},
+        "products": {"ZnSO4": 1, "H2O": 1}
+    },
+    "Reação 19: Nitrato de prata + Cloreto de potássio": {
+        "equation": "AgNO3 + KCl -> AgCl + KNO3",
+        "reactants": {"AgNO3": 1, "KCl": 1},
+        "products": {"AgCl": 1, "KNO3": 1}
+    },
+    "Reação 20: Carbonato de sódio + Ácido clorídrico": {
+        "equation": "Na2CO3 + 2HCl -> 2NaCl + CO2 + H2O",
+        "reactants": {"Na2CO3": 1, "HCl": 2},
+        "products": {"NaCl": 2, "CO2": 1, "H2O": 1}
+    },
+    "Reação 21: Óxido de ferro(III) + Ácido clorídrico": {
+        "equation": "Fe2O3 + 6HCl -> 2FeCl3 + 3H2O",
+        "reactants": {"Fe2O3": 1, "HCl": 6},
+        "products": {"FeCl3": 2, "H2O": 3}
+    },
+    "Reação 22: Sulfato de alumínio + Hidróxido de sódio": {
+        "equation": "Al2(SO4)3 + 6NaOH -> 2Al(OH)3 + 3Na2SO4",
+        "reactants": {"Al2(SO4)3": 1, "NaOH": 6},
+        "products": {"Al(OH)3": 2, "Na2SO4": 3}
+    }
 }
 
 def calcular_delta_H(reactants, products, entalpias_formacao):
