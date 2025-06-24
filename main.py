@@ -58,5 +58,5 @@ if st.button("Calcular produtos da reação"):
         st.write(f"{reaction['enthalpy']} kJ/mol")
 
     # Adiciona alerta de segurança com base na entalpia
-    alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
+    alerta_entalpia = verificar_entalpia(reaction['enthalpy'])
     st.warning(alerta_entalpia)
