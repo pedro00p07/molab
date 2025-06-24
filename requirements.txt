@@ -1,2 +1,4 @@
 scipy
 streamlit
+mendeleev
+mendeleev[vis]
