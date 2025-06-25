@@ -2,17 +2,14 @@ from content.reactions import *
 from mendeleev.vis import periodic_table
 from scipy.optimize import fsolve
 from enthalpy import verificar_entalpia
-import streamlit as st_pages
-import pandas as pd
-# from ui.periodic_table import mandeperiodic_table
 import streamlit as st
-# from ui.periodic_table import periodic_table
 
 page = st.sidebar.selectbox("Escolha a página:", ["Simulador", "Tabela Periódica"])
 
 if page == "Tabela Periódica":
     st.title("Tabela Periódica 🧪")
-    st.pyplot(periodic_table())
+    fig = periodic_table()
+    st.pyplot(fig)
 
 if page != "Tabela Periódica":
     st.title("MolLab 🧪")
@@ -20,8 +17,8 @@ if page != "Tabela Periódica":
 st.set_page_config(page_title="Simulador de Reações Químicas Inorgânicas", layout="centered")
 
 reaction_name = st.selectbox("Escolha a reação química:", list(reactions.keys()))
-
 reaction = reactions[reaction_name]
+
 st.markdown(f"**Equação da reação:** {reaction['equation']}")
 
 st.write("### Informe as quantidades iniciais dos reagentes (mol):")
@@ -51,6 +48,7 @@ def calculate_products(reactant_amounts, reaction):
     reactants_remaining = {re: reactant_amounts[re] - coef_reactants[re] * times_reaction for re in coef_reactants}
 
     return product_amounts, reactants_remaining, limiting_reagent
+
 if st.button("Calcular produtos da reação"):
     products_formed, reactants_left, limiting_reagent = calculate_products(reactant_amounts, reaction)
     st.write("### Produtos formados (mol):")
@@ -66,12 +64,12 @@ if st.button("Calcular produtos da reação"):
     st.write("### Reagente limitante:")
     st.write(f"{limiting_reagent} é o reagente limitante.")
 
-    st.bar_chart(products_formed)   
+    # st.bar_chart(products_formed)   
 
-    if "enthalpy" in reaction:
-        st.write("### Entalpia de reação:")
-        st.write(f"{reaction['enthalpy']} kJ/mol")
+    # if "enthalpy" in reaction:
+    #     st.write("### Entalpia de reação:")
+    #     st.write(f"{reaction['enthalpy']} kJ/mol")
 
-        # Adiciona alerta de segurança com base na entalpia
-        alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
-        st.warning(alerta_entalpia)
+    #     # Adiciona alerta de segurança com base na entalpia
+    #     alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
+    #     st.warning(alerta_entalpia)
