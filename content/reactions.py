@@ -141,26 +141,26 @@ reactions = {
         "products": {"Al(OH)3": 2, "Na2SO4": 3}
     }
 }
-
-def calcular_delta_H(reactants, products, entalpias_formacao):
-    """
-    Calcula a variação de entalpia (ΔH) da reação.
-    Parâmetros:
-    - reactants: dicionário com substâncias reagentes e suas quantidades
-    - products: dicionário com substâncias produtos e suas quantidades
-    - entalpias_formacao: dicionário com ΔHf° das substâncias
-    """
-    try:
-        H_reactants = sum(entalpias_formacao[comp] * mol for comp, mol in reactants.items())
-        H_products = sum(entalpias_formacao[comp] * mol for comp, mol in products.items())
-        return H_products - H_reactants
-    except KeyError as e:
-        return f"Erro: entalpia de formação desconhecida para '{e.args[0]}'"
-
-
-for nome, dados in reactions.items():
-    delta_H = calcular_delta_H(dados["reactants"], dados["products"], entalpias_formacao)
-    print(f"{nome}")
-    print(f"Equação: {dados['equation']}")
-    print(f"ΔH = {delta_H} kJ/mol")
-    print("-" * 50)
+ 
+# def calcular_delta_H(reactants, products, entalpias_formacao):
+#     """
+#     Calcula a variação de entalpia (ΔH) da reação.
+#     Parâmetros:
+#     - reactants: dicionário com substâncias reagentes e suas quantidades
+#     - products: dicionário com substâncias produtos e suas quantidades
+#     - entalpias_formacao: dicionário com ΔHf° das substâncias
+#     """
+#     try:
+#         H_reactants = sum(entalpias_formacao[comp] * mol for comp, mol in reactants.items())
+#         H_products = sum(entalpias_formacao[comp] * mol for comp, mol in products.items())
+#         return H_products - H_reactants
+#     except KeyError as e:
+#         return f"Erro: entalpia de formação desconhecida para '{e.args[0]}'"
+# 
+# 
+# for nome, dados in reactions.items():
+#     delta_H = calcular_delta_H(dados["reactants"], dados["products"], entalpias_formacao)
+#     print(f"{nome}")
+#     print(f"Equação: {dados['equation']}")
+#     print(f"ΔH = {delta_H} kJ/mol")
+#     print("-" * 50)
