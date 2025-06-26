@@ -5,7 +5,7 @@ page = st.sidebar.selectbox("Escolha a página:", ["Simulador", "Tabela Periódi
 
 if page == "Tabela Periódica":
     st.title("Tabela Periódica 🔬")
-    st.image("images/tabela.png")
+    st.image("assets/tabela.png")
     st.stop()
 
 if page != "Tabela Periódica":
