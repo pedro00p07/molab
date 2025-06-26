@@ -16,6 +16,8 @@ st.set_page_config(page_title="Simulador de Reações Químicas Inorgânicas", l
 reaction_name = st.selectbox("Escolha a reação química:", list(reactions.keys()))
 reaction = reactions[reaction_name]
 
+st.markdown("---")
+
 st.markdown(f"**Equação da reação:** {reaction['equation']}")
 
 st.write("### Informe as quantidades iniciais dos reagentes (mol):")
@@ -41,13 +43,15 @@ def calculate_products(reactant_amounts, reaction):
     # Quantidades formadas dos produtos
     product_amounts = {prod: coef_products[prod] * times_reaction for prod in coef_products}
 
+    st.markdown("---")
+
     # Quantidades restantes dos reagentes
     reactants_remaining = {re: reactant_amounts[re] - coef_reactants[re] * times_reaction for re in coef_reactants}
 
     return product_amounts, reactants_remaining, limiting_reagent
 
 
-if st.button("Calcular produtos da reação"):
+if st.button("Calcular produtos da reação 🖩"):
     products_formed, reactants_left, limiting_reagent = calculate_products(reactant_amounts, reaction)
     st.write("### Produtos formados (mol):")
     for p, amt in products_formed.items():
