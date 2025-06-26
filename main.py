@@ -1,13 +1,11 @@
 from content.reactions import *
-from scipy.optimize import fsolve
-from enthalpy import verificar_entalpia
 import streamlit as st
 
 page = st.sidebar.selectbox("Escolha a página:", ["Simulador", "Tabela Periódica"])
 
 if page == "Tabela Periódica":
     st.title("Tabela Periódica 🔬")
-    st.image("https://sciencenotes.org/wp-content/uploads/2017/01/PeriodicTableBW2017.png")
+    st.image("images/tabela.png")
     st.stop()
 
 if page != "Tabela Periódica":
@@ -47,6 +45,7 @@ def calculate_products(reactant_amounts, reaction):
     reactants_remaining = {re: reactant_amounts[re] - coef_reactants[re] * times_reaction for re in coef_reactants}
 
     return product_amounts, reactants_remaining, limiting_reagent
+
 
 if st.button("Calcular produtos da reação"):
     products_formed, reactants_left, limiting_reagent = calculate_products(reactant_amounts, reaction)
