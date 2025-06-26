@@ -1,5 +1,4 @@
 from content.reactions import *
-from mendeleev.vis import periodic_table
 from scipy.optimize import fsolve
 from enthalpy import verificar_entalpia
 import streamlit as st
@@ -7,9 +6,9 @@ import streamlit as st
 page = st.sidebar.selectbox("Escolha a página:", ["Simulador", "Tabela Periódica"])
 
 if page == "Tabela Periódica":
-    st.title("Tabela Periódica 🧪")
-    fig = periodic_table()
-    st.pyplot(fig)
+    st.title("Tabela Periódica 🔬")
+    st.image("https://sciencenotes.org/wp-content/uploads/2017/01/PeriodicTableBW2017.png")
+    st.stop()
 
 if page != "Tabela Periódica":
     st.title("MolLab 🧪")
