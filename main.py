@@ -56,7 +56,7 @@ def calculate_products(reactant_amounts, reaction):
 
     return product_amounts, reactants_remaining, limiting_reagent
 
-
+# Condição para executar a a função calculate_products, criando seções e exibindo os respectivos resultados 
 if st.button("Calcular produtos da reação 🖩"):
     products_formed, reactants_left, limiting_reagent = calculate_products(reactant_amounts, reaction)
     st.write("### Produtos formados (mol):")
