@@ -1,6 +1,5 @@
 from content.reactions import *
 import streamlit as st
-
 page = st.sidebar.selectbox("Escolha a página:", ["Simulador", "Tabela Periódica"])
 
 if page == "Tabela Periódica":
@@ -75,3 +74,6 @@ if st.button("Calcular produtos da reação 🖩"):
     #     # Adiciona alerta de segurança com base na entalpia
     #     alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
     #     st.warning(alerta_entalpia)
+    st.markdown("---")
+
+    st.warning("⚠️  Atenção! Esta mistura pode ser perigosa.")
