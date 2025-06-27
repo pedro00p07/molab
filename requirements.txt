@@ -1,8 +1,1 @@
-scipy
 streamlit
-mendeleev
-mendeleev[vis]
-bokeh
-matplotlib
-plotly
-seaborn
