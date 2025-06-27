@@ -1,20 +1,27 @@
+#Importando todas as reações definidas no módulo content.reactions:
 from content.reactions import *
+# Importando a biblioteca Streamlit para criar a interface web:
 import streamlit as st
+
+# Define a configuração inicial das páginas
 page = st.sidebar.selectbox("Escolha a página:", ["Simulador", "Tabela Periódica"])
 
+# Condição para página da tabela periodica :
 if page == "Tabela Periódica":
     st.title("Tabela Periódica 🔬")
     st.image("assets/tabela.png")
-    st.stop()
+    st.stop() #Para a execução do script aqui, impedindo que a parte do simulador seja exibida
 
+# Lógica condicional para exibir a página do Simulador:
 if page != "Tabela Periódica":
     st.title("MolLab 🧪")
 
 st.set_page_config(page_title="Simulador de Reações Químicas Inorgânicas", layout="centered")
-
+# Cria um seletor para o usuário escolher uma reação química da lista carregada
 reaction_name = st.selectbox("Escolha a reação química:", list(reactions.keys()))
 reaction = reactions[reaction_name]
 
+# Exibe a equação da reação selecionada
 st.markdown("---")
 
 st.markdown(f"**Equação da reação:** {reaction['equation']}")
