@@ -33,7 +33,8 @@ reactions = {
     "Reação 1: Ácido clorídrico + Hidróxido de sódio": {
         "equation": "HCl + NaOH -> NaCl + H2O",
         "reactants": {"HCl": 1, "NaOH": 1},
-        "products": {"NaCl": 1, "H2O": 1}
+        "products": {"NaCl": 1, "H2O": 1},
+        "segura": True
     },
     "Reação 2: Óxido de cálcio + Água": {
         "equation": "CaO + H2O -> Ca(OH)2",
