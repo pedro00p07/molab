@@ -41,7 +41,7 @@ def calculate_products(reactant_amounts, reaction):
 
     # Calcular o número de vezes que a reação pode ocorrer (baseado no reagente limitante)
     limiting_reagent = min(
-        coef_reactants,
+        coef_reactants,st.warning("⚠️  Atenção! Esta mistura pode ser perigosa.")
         key=lambda r: reactant_amounts[r] / coef_reactants[r] if coef_reactants[r] > 0 else float('inf')
     )
     times_reaction = reactant_amounts[limiting_reagent] / coef_reactants[limiting_reagent] if coef_reactants[limiting_reagent] > 0 else 0
@@ -82,5 +82,6 @@ if st.button("Calcular produtos da reação 🖩"):
     #     alerta_entalpia = verificar_entalpia(reaction["enthalpy"])
     #     st.warning(alerta_entalpia)
     st.markdown("---")
-
-    st.warning("⚠️  Atenção! Esta mistura pode ser perigosa.")
+    
+if not reaction.get("segura", True):
+    st.warning("⚠️ Atenção! Esta mistura pode ser perigosa.")
