@@ -8,23 +8,23 @@
 - Cálculo de proporções molares em massa.
 - Balanceamento automático de equações químicas.
 
-# 🖳 Como rodar o projeto
+# 🖥️ Como rodar o projeto
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/GabrielSchutz/molab.git
-    cd molab
-    ```
+```bash
+git clone https://github.com/pereirya/molab.git
+cd molab
+```
 
 2. Instale as dependências:
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 3. Execute o aplicativo:
-    ```bash 
-    streamlit run main.py
-    ```
+```bash 
+streamlit run main.py
+```
 
-# 🖇 Licença
+# 🏮 Licença
 Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
