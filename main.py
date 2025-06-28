@@ -40,7 +40,7 @@ def calculate_products(reactant_amounts, reaction):
     coef_products = reaction["products"]
 
     # Calcular o número de vezes que a reação pode ocorrer (baseado no reagente limitante)
-    limiting_reagent = min(
+    limiting_reagent = min( coef_reactants,
         key=lambda r: reactant_amounts[r] / coef_reactants[r] if coef_reactants[r] > 0 else float('inf')
     )
     times_reaction = reactant_amounts[limiting_reagent] / coef_reactants[limiting_reagent] if coef_reactants[limiting_reagent] > 0 else 0
